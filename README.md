@@ -45,14 +45,32 @@ limitations under the License.
 
 <!-- Package usage documentation. -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/ndarray-matrix-complex64
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
+-   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-import Complex64Matrix from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-matrix-complex64@esm/index.mjs';
+var Complex64Matrix = require( '@stdlib/ndarray-matrix-complex64' );
 ```
 
 #### Complex64Matrix( \[options] )
@@ -60,7 +78,7 @@ import Complex64Matrix from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-matri
 Returns a two-dimensional single-precision complex floating-point [ndarray][@stdlib/ndarray/ctor].
 
 ```javascript
-import getShape from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-shape@esm/index.mjs';
+var getShape = require( '@stdlib/ndarray-shape' );
 
 var arr = new Complex64Matrix();
 // returns <ndarray>
@@ -81,7 +99,7 @@ The function accepts the following options:
 Returns a two-dimensional single-precision complex floating-point [ndarray][@stdlib/ndarray/ctor] having a specified shape.
 
 ```javascript
-import getShape from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-shape@esm/index.mjs';
+var getShape = require( '@stdlib/ndarray-shape' );
 
 var arr = new Complex64Matrix( [ 3, 3 ] );
 // returns <ndarray>
@@ -100,7 +118,7 @@ The function accepts the following arguments:
 Returns a two-dimensional single-precision complex floating-point [ndarray][@stdlib/ndarray/ctor] having a specified shape.
 
 ```javascript
-import getShape from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-shape@esm/index.mjs';
+var getShape = require( '@stdlib/ndarray-shape' );
 
 var arr = new Complex64Matrix( 3, 3 );
 // returns <ndarray>
@@ -122,7 +140,7 @@ Creates a two-dimensional single-precision complex floating-point [ndarray][@std
 <!-- eslint-disable max-len -->
 
 ```javascript
-import getShape from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-shape@esm/index.mjs';
+var getShape = require( '@stdlib/ndarray-shape' );
 
 var arr = new Complex64Matrix( [ [ 1.0, 2.0, 3.0, 4.0 ], [ 5.0, 6.0, 7.0, 8.0 ] ] );
 // returns <ndarray>
@@ -141,8 +159,8 @@ The function accepts the following arguments:
 Returns a two-dimensional single-precision complex floating-point [ndarray][@stdlib/ndarray/ctor] view of an [`ArrayBuffer`][@stdlib/array/buffer].
 
 ```javascript
-import ArrayBuffer from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-buffer@esm/index.mjs';
-import getShape from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-shape@esm/index.mjs';
+var ArrayBuffer = require( '@stdlib/array-buffer' );
+var getShape = require( '@stdlib/ndarray-shape' );
 
 var buf = new ArrayBuffer( 64 );
 
@@ -177,8 +195,8 @@ The function accepts the following arguments:
 Returns a two-dimensional single-precision complex floating-point [ndarray][@stdlib/ndarray/ctor] view of an [`ArrayBuffer`][@stdlib/array/buffer].
 
 ```javascript
-import ArrayBuffer from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-buffer@esm/index.mjs';
-import getShape from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-shape@esm/index.mjs';
+var ArrayBuffer = require( '@stdlib/array-buffer' );
+var getShape = require( '@stdlib/ndarray-shape' );
 
 var buf = new ArrayBuffer( 64 );
 
@@ -222,20 +240,15 @@ The function accepts the following arguments:
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="module">
-
-import discreteUniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-array-discrete-uniform@esm/index.mjs';
-import sum from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-ext-sum@esm/index.mjs';
-import map from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-map@esm/index.mjs';
-import real from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-float32-real@esm/index.mjs';
-import imag from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-float32-imag@esm/index.mjs';
-import Complex64 from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-float32-ctor@esm/index.mjs';
-import ndarray2array from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-to-array@esm/index.mjs';
-import Complex64Matrix from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-matrix-complex64@esm/index.mjs';
+```javascript
+var discreteUniform = require( '@stdlib/random-array-discrete-uniform' );
+var sum = require( '@stdlib/blas-ext-sum' );
+var map = require( '@stdlib/ndarray-map' );
+var real = require( '@stdlib/complex-float32-real' );
+var imag = require( '@stdlib/complex-float32-imag' );
+var Complex64 = require( '@stdlib/complex-float32-ctor' );
+var ndarray2array = require( '@stdlib/ndarray-to-array' );
+var Complex64Matrix = require( '@stdlib/ndarray-matrix-complex64' );
 
 // Create a matrix containing random values:
 var x = new Complex64Matrix([
@@ -265,10 +278,6 @@ v = sum( y, {
     'dims': [ -1 ]
 });
 console.log( ndarray2array( v ) );
-
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -287,6 +296,18 @@ console.log( ndarray2array( v ) );
 
 <section class="related">
 
+* * *
+
+## See Also
+
+-   <span class="package-name">[`@stdlib/ndarray-matrix/float64`][@stdlib/ndarray/matrix/float64]</span><span class="delimiter">: </span><span class="description">create a double-precision floating-point matrix (i.e., a two-dimensional ndarray).</span>
+-   <span class="package-name">[`@stdlib/ndarray-matrix/float32`][@stdlib/ndarray/matrix/float32]</span><span class="delimiter">: </span><span class="description">create a single-precision floating-point matrix (i.e., a two-dimensional ndarray).</span>
+-   <span class="package-name">[`@stdlib/ndarray-matrix/int32`][@stdlib/ndarray/matrix/int32]</span><span class="delimiter">: </span><span class="description">create a 32-bit signed integer matrix (i.e., a two-dimensional ndarray).</span>
+-   <span class="package-name">[`@stdlib/ndarray-matrix/complex128`][@stdlib/ndarray/matrix/complex128]</span><span class="delimiter">: </span><span class="description">create a double-precision complex floating-point matrix (i.e., a two-dimensional ndarray).</span>
+-   <span class="package-name">[`@stdlib/ndarray-matrix/ctor`][@stdlib/ndarray/matrix/ctor]</span><span class="delimiter">: </span><span class="description">create a matrix (i.e., a two-dimensional ndarray).</span>
+-   <span class="package-name">[`@stdlib/ndarray-vector/complex64`][@stdlib/ndarray/vector/complex64]</span><span class="delimiter">: </span><span class="description">create a single-precision complex floating-point vector (i.e., a one-dimensional ndarray).</span>
+-   <span class="package-name">[`@stdlib/ndarray-ctor`][@stdlib/ndarray/ctor]</span><span class="delimiter">: </span><span class="description">multidimensional array constructor.</span>
+
 </section>
 
 <!-- /.related -->
@@ -300,7 +321,7 @@ console.log( ndarray2array( v ) );
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -363,9 +384,25 @@ Copyright &copy; 2016-2026. The Stdlib [Authors][stdlib-authors].
 
 [stdlib-license]: https://raw.githubusercontent.com/stdlib-js/ndarray-matrix-complex64/main/LICENSE
 
-[@stdlib/array/buffer]: https://github.com/stdlib-js/array-buffer/tree/esm
+[@stdlib/array/buffer]: https://github.com/stdlib-js/array-buffer
 
-[@stdlib/ndarray/ctor]: https://github.com/stdlib-js/ndarray-ctor/tree/esm
+[@stdlib/ndarray/ctor]: https://github.com/stdlib-js/ndarray-ctor
+
+<!-- <related-links> -->
+
+[@stdlib/ndarray/matrix/float64]: https://github.com/stdlib-js/ndarray-matrix-float64
+
+[@stdlib/ndarray/matrix/float32]: https://github.com/stdlib-js/ndarray-matrix-float32
+
+[@stdlib/ndarray/matrix/int32]: https://github.com/stdlib-js/ndarray-matrix-int32
+
+[@stdlib/ndarray/matrix/complex128]: https://github.com/stdlib-js/ndarray-matrix-complex128
+
+[@stdlib/ndarray/matrix/ctor]: https://github.com/stdlib-js/ndarray-matrix-ctor
+
+[@stdlib/ndarray/vector/complex64]: https://github.com/stdlib-js/ndarray-vector-complex64
+
+<!-- </related-links> -->
 
 </section>
 
