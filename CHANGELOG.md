@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2026-11-06)
+## Unreleased (2026-11-17)
 
 <section class="features">
 
@@ -22,6 +22,7 @@
 
 <details>
 
+-   [`9762912`](https://github.com/stdlib-js/stdlib/commit/9762912fe45c974b627d541f35f95be4b5551296) - **docs:** update related packages sections [(#16666)](https://github.com/stdlib-js/stdlib/pull/16666) _(by stdlib-bot)_
 -   [`737b1e3`](https://github.com/stdlib-js/stdlib/commit/737b1e35c49adc276baa4fef67bc7c7d5e6af21d) - **docs:** remove stray parenthesis [(#16521)](https://github.com/stdlib-js/stdlib/pull/16521) _(by Philipp Burckhardt)_
 -   [`d87ead6`](https://github.com/stdlib-js/stdlib/commit/d87ead6d0f8f86d8bb4b09da50c6088c34278195) - **docs:** rename variable _(by Athan Reines)_
 -   [`e9f7554`](https://github.com/stdlib-js/stdlib/commit/e9f75542701aa7535be20b624f35a483b4c6e34d) - **docs:** update related packages sections [(#13187)](https://github.com/stdlib-js/stdlib/pull/13187) _(by stdlib-bot)_
